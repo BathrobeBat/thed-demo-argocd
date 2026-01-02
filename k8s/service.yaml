@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service                                                             
+metadata:                                                                 
+  name: thed-demo-argocd
+  labels:
+    app: thed-demo-argocd
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: thed-demo-argocd

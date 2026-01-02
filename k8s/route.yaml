@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1                                         
+kind: Route                                                               
+metadata:                                                                 
+  name: thed-demo-argocd                                                        
+  labels:                                                                 
+    app: thed-demo-argocd                                                       
+spec:                                                                     
+  to:                                                                     
+    kind: Service                                                         
+    name: thed-demo-argocd                                                      
+    weight: 100
